@@ -1,50 +1,75 @@
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Image } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Image, ScrollView } from 'react-native'
 import React from 'react'
 
 const GenMenu = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.parent}>
             <View style={styles.body}>
+                <ScrollView>
+                    {/* Row 1 */}
+                    <View style={styles.row}>
+                        <View style={styles.buttonBox}>
+                            <TouchableOpacity onPress={() => navigation.navigate("scrone")}>
+                                <Image source={require("../../assets/images/deviceinfo.png")} style={styles.img} />
+                                <Text style={styles.btnTextHeading}>Device Info</Text>
+                                <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+                            </TouchableOpacity>
+                        </View>
 
-                {/* Row 1 */}
-                <View style={styles.row}>
-                    <View style={styles.buttonBox}>
-                        <TouchableOpacity onPress={() => navigation.navigate("scrone")}>
-                            <Image source={require("../../assets/images/deviceinfo.png")} style={styles.img} />
-                            <Text style={styles.btnTextHeading}>Device Info</Text>
-                            <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
-                        </TouchableOpacity>
+                        <View style={styles.buttonBox}>
+                            <TouchableOpacity onPress={() => navigation.navigate("tut1")}>
+                                <Image source={require("../../assets/images/gesture.jpg")} style={styles.img} />
+                                <Text style={styles.btnTextHeading}>Gesture</Text>
+
+                                <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
 
-                    <View style={styles.buttonBox}>
-                        <TouchableOpacity onPress={() => navigation.navigate("tut1")}>
-                            <Image source={require("../../assets/images/gesture.jpg")} style={styles.img} />
-                            <Text style={styles.btnTextHeading}>Gesture</Text>
+                    {/* Row 2 */}
+                    <View style={styles.row}>
+                        <View style={styles.buttonBox}>
+                            <TouchableOpacity onPress={() => navigation.navigate("tut2")}>
+                                <Image source={require("../../assets/images/tutorial.jpg")} resizeMode='contain' style={styles.img} />
+                                <Text style={styles.btnTextHeading}>Bouncy</Text>
+                                <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+                            </TouchableOpacity>
+                        </View>
 
-                            <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </Text>
-                        </TouchableOpacity>
+                        <View style={[styles.buttonBox,]}>
+                            <TouchableOpacity onPress={() => navigation.navigate("genpass")}>
+                                <Image source={require("../../assets/images/passgen.jpg")} resizeMode='contain' style={styles.img} />
+                                <Text style={styles.btnTextHeading}>Password Generator</Text>
+
+                                <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the.</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
-                </View>
 
-                {/* Row 2 */}
-                <View style={styles.row}>
-                    <View style={styles.buttonBox}>
-                        <TouchableOpacity onPress={() => navigation.navigate("tut2")}>
-                            <Image source={require("../../assets/images/tutorial.jpg")} resizeMode='contain' style={styles.img} />
-                            <Text style={styles.btnTextHeading}>Bouncy</Text>
-                            <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
-                        </TouchableOpacity>
+                    {/* Row 3 */}
+                    <View style={styles.row}>
+                        <View style={styles.buttonBox}>
+                            <TouchableOpacity
+                                // onPress={() => navigation.navigate("tut2")}
+                            >
+                                <Image source={require("../../assets/images/dummy1.jpg")} resizeMode='contain' style={styles.img} />
+                                <Text style={styles.btnTextHeading}>Dummy</Text>
+                                <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the.</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                        <View style={[styles.buttonBox,]}>
+                            <TouchableOpacity
+                            // onPress={() => navigation.navigate("genpass")}
+                            >
+                                <Image source={require("../../assets/images/dummy2.jpg")} resizeMode='contain' style={styles.img} />
+                                <Text style={styles.btnTextHeading}>Not in use</Text>
+
+                                <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the.</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
-
-                    <View style={[styles.buttonBox, ]}>
-                        <TouchableOpacity onPress={() => navigation.navigate("genpass")}>
-                            <Image source={require("../../assets/images/passgen.jpg")} resizeMode='contain' style={styles.img} />
-                            <Text style={styles.btnTextHeading}>Password Generator</Text>
-
-                            <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the.</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
+                </ScrollView>
             </View>
         </SafeAreaView>
     )
