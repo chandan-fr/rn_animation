@@ -50,10 +50,10 @@ const GenMenu = ({ navigation }) => {
                     <View style={styles.row}>
                         <View style={styles.buttonBox}>
                             <TouchableOpacity
-                                // onPress={() => navigation.navigate("tut2")}
+                                onPress={() => navigation.navigate("tcp")}
                             >
                                 <Image source={require("../../assets/images/dummy1.jpg")} resizeMode='contain' style={styles.img} />
-                                <Text style={styles.btnTextHeading}>Dummy</Text>
+                                <Text style={styles.btnTextHeading}>TestCSSProperty</Text>
                                 <Text style={styles.btnTextPara}>Lorem Ipsum is simply dummy text of the.</Text>
                             </TouchableOpacity>
                         </View>

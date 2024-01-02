@@ -7,8 +7,9 @@ import Splash from './src/screens/Splash';
 import GeneratePassword from './src/screens/stacknav/GeneratePassword';
 import Tut1 from './src/screens/stacknav/Tut1';
 import GenMenu from './src/screens/stacknav/GenMenu';
-import Tute2 from './src/screens/stacknav/Tute2';
+import Tute2 from './src/screens/stacknav/BounceAnime';
 import { Easing } from 'react-native';
+import TestCSSProperty from './src/screens/stacknav/TestCSSProperty';
 
 const App = () => {
 
@@ -103,6 +104,7 @@ const App = () => {
         />
         <RootStack.Screen name='tut1' component={Tut1} />
         <RootStack.Screen name='tut2' component={Tute2} />
+        <RootStack.Screen name='tcp' component={TestCSSProperty} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
